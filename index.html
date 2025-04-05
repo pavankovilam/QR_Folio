@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- UPI payment Link upi://pay?pa=pavannit@ybl&pn=******1370&mc=0000&mode=02&purpose=00 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR folio</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar" class="hidden">
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('landing')">Home</button>
+            <button onclick="scrollToSection('myself')">MySelf</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('hireme')">HireMe</button>
+            <button onclick="scrollToSection('payments')">Payments</button>
+        </div>
+    </nav>
+
+    <div id="landing" class="section">
+        <div class="landing-buttons">
+            <button onclick="scrollToSection('myself')">MySelf</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('hireme')">HireMe</button>
+            <button onclick="scrollToSection('payments')">Payments</button>
+        </div>
+        <b><p>Hello This is <span style="color:#3ad826;">Pavan</span> I'm a <span id="roles" style="color: #3ad826;"></span> </p> </b>
+    </div>
+
+    <section id="myself" class="section">
+        <h2>My Self</h2>
+        <p>Hi, I'm Pavan, a recent graduate in the stream of Computer Science Passionate about coding, Problem Solving, and building Impactful Spftware solutions with skills in Python, JavScript, SQL and AI Technologies.I'm also looking for exiting role in Software Development. Outside of Tech I enjoy reading arcticles, Designing Prototypes and exploring the Culture in surroundings.I'm ready to take on new challenges and contribute to meaningful projects!</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack e-commerce platform with user authentication, product management, and payment integration.</p>
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>Stripe</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>AI-Powered Chatbot</h3>
+                <p>An intelligent chatbot using natural language processing to provide customer support and answer queries.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>NLP</span>
+                    <span>Flask</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Task Management App</h3>
+                <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                <div class="tech-stack">
+                    <span>Vue.js</span>
+                    <span>Firebase</span>
+                    <span>Tailwind CSS</span>
+                    <span>WebSocket</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather Dashboard</h3>
+                <p>An interactive weather dashboard that displays real-time weather data and forecasts for multiple locations.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>OpenWeather API</span>
+                    <span>Chart.js</span>
+                    <span>HTML/CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Fitness Tracker</h3>
+                <p>A mobile-first fitness tracking application that helps users monitor their workouts and progress.</p>
+                <div class="tech-stack">
+                    <span>React Native</span>
+                    <span>Redux</span>
+                    <span>Firebase</span>
+                    <span>Expo</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio website showcasing projects, skills, and professional experience.</p>
+                <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Git</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="code-link">Code <i class="fas fa-code"></i></a>
+                    <a href="#" class="live-link">Live <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hireme" class="section">
+        <h2>Hire Me</h2>
+        <p>This section contains information about hiring me.</p>
+    </section>
+
+    <section id="payments" class="section">
+        <h2>Payments</h2>
+        <p>You can also make me Payments using this site scan QR if you are using Desktop or Simply Click on the link if you are using Andriod or IOS  </p>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show/hide navbar on scroll
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const navbar = document.getElementById('navbar');
+            const landingSection = document.getElementById('landing');
+            const landingHeight = landingSection.offsetHeight;
+            
+            if (currentScroll > landingHeight) {
+                navbar.classList.remove('hidden');
+                if (currentScroll > lastScroll) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+            } else {
+                navbar.classList.add('hidden');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navButtons = document.querySelector('.nav-buttons');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navButtons.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+
+        // Typing animation
+        const roles = [
+            "Software Engineer",
+            "Web Developer",
+            "Freasher",
+            "Freelancer",
+            "Full Stack Developer"
+        ];
+        
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        let deletingSpeed = 50;
+        let pauseTime = 2000;
+        
+        function typeRole() {
+            const rolesElement = document.getElementById('roles');
+            const currentRole = roles[currentRoleIndex];
+            
+            if (isDeleting) {
+                rolesElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+                typingSpeed = deletingSpeed;
+            } else {
+                rolesElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+                typingSpeed = 100;
+            }
+            
+            if (!isDeleting && currentCharIndex === currentRole.length) {
+                isDeleting = true;
+                typingSpeed = pauseTime;
+            } else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+            }
+            
+            setTimeout(typeRole, typingSpeed);
+        }
+        
+        // Start the typing animation when the page loads
+        window.onload = typeRole;
+    </script>
+</body>
+</html>
