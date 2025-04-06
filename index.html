@@ -7,6 +7,7 @@
     <title>QR folio</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav id="navbar" class="hidden">
@@ -136,12 +137,64 @@
 
     <section id="hireme" class="section">
         <h2>Hire Me</h2>
-        <p>This section contains information about hiring me.</p>
+        <div class="hire-container">
+            <div class="hire-info">
+                <h3>Let's Work Together</h3>
+                <p>I'm currently available for freelance work and full-time positions. If you have a project that you want to get started, think you need my help with something, or just want to say hello, then get in touch.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kovi.pavan.kumar@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-linkedin"></i>
+                        <span><a href="https://www.linkedin.com/in/pavan-kumar-kovilampati" target="_blank" class="social-link">Pavan Kumar Kovilampati</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/kovi.pavan.kumar@gmail.com" method="POST" >
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id="payments" class="section">
         <h2>Payments</h2>
-        <p>You can also make me Payments using this site scan QR if you are using Desktop or Simply Click on the link if you are using Andriod or IOS  </p>
+        <div class="payment-container">
+            <div class="payment-card">
+                <div class="qr-container">
+                    <img src="Asesets/qrcode.png" alt="QR Code">
+                </div>
+                <div class="payment-info">
+                    <h3>Scan to Pay</h3>
+                    <p>You can make payments by scanning the QR code if you're using a desktop device.</p>
+                    <div class="payment-link">
+                        <a href="upi://pay?pa=pavannit@apl" class="payment-button">
+                            <i class="fas fa-mobile-alt"></i> Pay Now
+                        </a>
+                        <p>Click here if you're using a mobile device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -222,6 +275,15 @@
         
         // Start the typing animation when the page loads
         window.onload = typeRole;
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset the form
+            this.reset();
+        });
     </script>
 </body>
 </html>
