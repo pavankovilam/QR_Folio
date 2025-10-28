@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div class="contact-form">
-                    <form id="contactForm" action="https://formsubmit.co/kovi.pavan.kumar@gmail.com" method="POST" >
+                    <form id="contactForm" action="" method="POST" name="MsgData">
                     <div class="form-group">
                         <input type="text" id="name" name="name" required placeholder="Your Name">
                     </div>
@@ -277,6 +277,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-WNWM4EX0T8');
+
+//Sends Message to Google Form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwz7aMghOnycC1HGjTpfdkX9u2rqijUb8a6HNqCbwulYcDjufyS9BHuwYnjQyTlwATx/exec'
+const form = document.forms['MsgData'] //Form Name 
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+    .finally(document.MsgData.reset())
+})
 </script>
 </body>
 </html>
