@@ -260,13 +260,17 @@
         window.onload = typeRole;
 
         // Contact Form Handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset the form
-            this.reset();
-        });
+//Sends Message to Google Form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxAQ1FkGGdwvysJnGKLG84weD7lRciW3sFsy7eNy7D7ufV9F87gGdiexSSliOPgcmXa/exec'
+const form = document.forms['MsgData'] //Form Name 
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  alert('Thank you for your message! I will get back to you soon.');
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+    .finally(document.MsgData.reset())
+})
     </script>
 
     <!-- Google tag (gtag.js) -->
@@ -277,17 +281,6 @@
   gtag('js', new Date());
 
   gtag('config', 'G-WNWM4EX0T8');
-
-//Sends Message to Google Form
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwz7aMghOnycC1HGjTpfdkX9u2rqijUb8a6HNqCbwulYcDjufyS9BHuwYnjQyTlwATx/exec'
-const form = document.forms['MsgData'] //Form Name 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-    .finally(document.MsgData.reset())
-})
 </script>
 </body>
 </html>
